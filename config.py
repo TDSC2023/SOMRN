@@ -1,0 +1,20 @@
+import torch
+GPU = 0
+DEVICE = torch.device("cuda:{}".format(GPU) if torch.cuda.is_available() else "cpu")
+# DEVICE = "cpu"
+
+IN_FEATURES = 309 
+OUT_FEATURES = 342 
+RADIUS = 7 
+BETA = 0.15 
+# PNET_HIDDEN_NEURONS = int(OUT_FEATURES/2)
+PNET_HIDDEN_NEURONS = int(OUT_FEATURES*2)
+N_ACTIONS = 3
+EPOCHS = 20
+LR = 1e-3
+SEQ_LEN = 100
+ACCUMULATION_STEPS = 16 
+SWITCH_TIME = 4
+EVAL_FREQ = 1000
+NUM_WORKERS = 8
+SAMPLECNT = 5
